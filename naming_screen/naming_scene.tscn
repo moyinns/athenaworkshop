@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://bjanngr2bnboj"]
+
+[ext_resource type="Script" uid="uid://d2okw5k6qadsx" path="res://naming_screen/naming_scene.gd" id="1_2u4ec"]
+[ext_resource type="Texture2D" uid="uid://dtd0en61cb3sa" path="res://naming_screen/name your pet screen pink border.PNG" id="1_wpgdd"]
+[ext_resource type="Script" uid="uid://dlxldcxiq0gst" path="res://naming_screen/cat.gd" id="3_2u4ec"]
+[ext_resource type="FontFile" uid="uid://bgeh7kdamamam" path="res://kindergarten_4 FONT/kindergarten.ttf" id="3_50y1q"]
+[ext_resource type="Texture2D" uid="uid://du3fo7iyggmpr" path="res://PACK/cat 3 (64х64).png" id="3_m62pl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m7ov"]
+atlas = ExtResource("3_m62pl")
+region = Rect2(0, 896, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvpkh"]
+atlas = ExtResource("3_m62pl")
+region = Rect2(64, 896, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rpju"]
+atlas = ExtResource("3_m62pl")
+region = Rect2(128, 896, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jvpkh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m7ov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvpkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rpju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m7ov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m7ov")
+}],
+"loop": true,
+"name": &"idle meow",
+"speed": 5.0
+}]
+
+[node name="naming_scene" type="Node2D"]
+script = ExtResource("1_2u4ec")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -59.0
+offset_top = -38.0
+offset_right = 1041.0
+offset_bottom = 1062.0
+texture = ExtResource("1_wpgdd")
+
+[node name="cat" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(294, 443.00003)
+scale = Vector2(6.71875, 6.7187505)
+sprite_frames = SubResource("SpriteFrames_jvpkh")
+animation = &"idle meow"
+frame_progress = 0.8477836
+centered = false
+script = ExtResource("3_2u4ec")
+
+[node name="pet_name_input" type="LineEdit" parent="."]
+offset_left = 148.0
+offset_top = 834.0
+offset_right = 868.0
+offset_bottom = 903.0
+theme_override_colors/font_color = Color(0.95686275, 0.7607843, 0.827451, 1)
+theme_override_fonts/font = ExtResource("3_50y1q")
+theme_override_font_sizes/font_size = 40
+flat = true
+caret_blink = true
+
+[connection signal="text_submitted" from="pet_name_input" to="." method="_on_pet_name_text_submitted"]

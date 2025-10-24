@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://bedf10efwliqi"]
+
+[ext_resource type="Script" uid="uid://dnc1rvnf24u06" path="res://opening_screen/opening_screen.gd" id="1_fmed4"]
+[ext_resource type="Texture2D" uid="uid://ccdov332oil0" path="res://opening_screen/larger opening screen.PNG" id="2_fmed4"]
+[ext_resource type="FontFile" uid="uid://bgeh7kdamamam" path="res://kindergarten_4 FONT/kindergarten.ttf" id="3_ieq55"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mlqw3"]
+
+[node name="opening_screen" type="Node2D"]
+position = Vector2(5, 7)
+script = ExtResource("1_fmed4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -57.0
+offset_top = -48.0
+offset_right = 1043.0
+offset_bottom = 1052.0
+texture = ExtResource("2_fmed4")
+metadata/_edit_use_anchors_ = true
+
+[node name="play" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 287.0
+offset_top = 401.0
+offset_right = 701.0
+offset_bottom = 485.0
+metadata/_edit_use_anchors_ = true
+
+[node name="load" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 287.0
+offset_top = 499.0
+offset_right = 701.0
+offset_bottom = 583.0
+metadata/_edit_use_anchors_ = true
+
+[node name="music" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 288.0
+offset_top = 601.0
+offset_right = 702.0
+offset_bottom = 685.0
+metadata/_edit_use_anchors_ = true
+
+[node name="quit" type="Button" parent="."]
+show_behind_parent = true
+offset_left = 291.0
+offset_top = 703.0
+offset_right = 705.0
+offset_bottom = 787.0
+metadata/_edit_use_anchors_ = true
+
+[node name="music settings" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="volume slider" type="HSlider" parent="music settings"]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 780.0
+offset_right = 651.0
+offset_bottom = 934.0
+max_value = 5.0
+step = 0.01
+
+[node name="quit music button" type="Button" parent="music settings"]
+layout_mode = 0
+offset_left = 652.0
+offset_top = 829.0
+offset_right = 765.0
+offset_bottom = 881.0
+theme_override_colors/font_color = Color(0.87058824, 0.60784316, 0.69411767, 1)
+theme_override_colors/font_outline_color = Color(0.87058824, 0.60784316, 0.69411767, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("3_ieq55")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mlqw3")
+text = "quit"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="music" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="music settings/volume slider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="pressed" from="music settings/quit music button" to="." method="_on_quit_music_button_pressed"]
