@@ -553,8 +553,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oyd48"]
-radius = 12.055817
-height = 36.613976
+radius = 15.776741
+height = 40.186058
 
 [node name="pet_scene" type="Node2D"]
 script = ExtResource("1_egs70")
@@ -597,7 +597,7 @@ autostart = true
 script = ExtResource("6_ps7eo")
 
 [node name="scene switch timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 10.0
 
 [node name="cat" type="AnimatedSprite2D" parent="."]
 texture_filter = 3
@@ -612,11 +612,24 @@ script = ExtResource("4_ha860")
 [node name="Area2D" type="Area2D" parent="cat"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cat/Area2D"]
-position = Vector2(31.702326, 32.74418)
+position = Vector2(31.404652, 31.999992)
 rotation = 1.5707964
 scale = Vector2(1, 0.9999999)
 shape = SubResource("CapsuleShape2D_oyd48")
 
+[node name="pet text" type="Label" parent="."]
+offset_left = 221.0
+offset_top = 53.0
+offset_right = 829.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0.87058824, 0.60784316, 0.69411767, 1)
+theme_override_fonts/font = ExtResource("5_5cbwq")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+autowrap_mode = 3
+
 [connection signal="timeout" from="hunger_timer" to="." method="_on_hunger_timer_timeout"]
 [connection signal="timeout" from="thirst_timer" to="." method="_on_thirst_timer_timeout"]
+[connection signal="timeout" from="scene switch timer" to="." method="_on_scene_switch_timer_timeout"]
 [connection signal="mouse_entered" from="cat/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_shape_exited" from="cat/Area2D" to="." method="_on_area_2d_mouse_shape_exited"]

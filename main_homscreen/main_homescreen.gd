@@ -3,6 +3,7 @@ extends Node2D
 @onready var display_pet_name = $display_pet_name
 @onready var hunger_bar = $"hunger bar"
 @onready var thirst_bar = $"thirst bar"
+@onready var level_label = $"level label"
 
 
 func _ready() -> void:
@@ -10,12 +11,13 @@ func _ready() -> void:
 	hunger_bar.text = "hunger: " + str(Globals.hunger) + "%" # global variabls so its easier to save 
 	thirst_bar.text = "thirst: " + str(Globals.thirst) + "%"
 	$cat.standing()
-
+	level_label.text = "level: "+str(Globals.level)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Globals.hunger == 0 or Globals.thirst == 0:
 		get_tree().change_scene_to_file("res://main_homscreen/death_scene.tscn")
+	level_label.text = "level: "+str(floori(Globals.level))
 
 func _on_hunger_timer_timeout() -> void:
 	Globals.hunger = max(Globals.hunger - 1, 0)  # decrease by 1 but don’t go below 0
@@ -33,3 +35,15 @@ func _on_give_water_pressed() -> void:
 
 func _on_give_food_pressed() -> void:
 	get_tree().change_scene_to_file("res://water + food + pet screen/food_scene.tscn")
+
+func _on_pet_pressed() -> void:
+	get_tree().change_scene_to_file("res://water + food + pet screen/pet_scene.tscn")
+
+func save ():
+	var file = FileAccess.open(Globals.save_path, FileAccess.WRITE)
+	file.store_var(Globals.hunger)
+	file.store_var(Globals.thirst)
+	file.store_var(Globals.level)
+	file.store_var(Globals.pet_name)
+	
+	

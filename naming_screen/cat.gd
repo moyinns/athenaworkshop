@@ -14,3 +14,9 @@ func drinking():
 
 func jump():
 	play("jump")
+
+func pet():
+	play("petting")
+
+func lick():
+	play("licking paw")

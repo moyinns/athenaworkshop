@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 	if Globals.thirst == 100 and not scene_timer_started:
 		scene_timer_started = true
 		scene_switch_timer.start()
+		Globals.level += 0.2
 		$cat.jump()
 	if Globals.thirst == 100 and scene_timer_started:
 		water_text.text = "yay! "+str(Globals.pet_name)+" isn't thirsty anymore. "

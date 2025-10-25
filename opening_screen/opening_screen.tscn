@@ -79,9 +79,34 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mlqw3")
 text = "quit"
 
+[node name="load settings" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="load status" type="Label" parent="load settings"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 822.0
+offset_right = 715.0
+offset_bottom = 890.0
+theme_override_colors/font_color = Color(0.87058824, 0.60784316, 0.69411767, 1)
+theme_override_fonts/font = ExtResource("3_ieq55")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="load timer" type="Timer" parent="load settings"]
+wait_time = 3.0
+
+[node name="fail load timer" type="Timer" parent="load settings"]
+wait_time = 3.0
+
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="music" to="." method="_on_music_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="value_changed" from="music settings/volume slider" to="." method="_on_volume_slider_value_changed"]
 [connection signal="pressed" from="music settings/quit music button" to="." method="_on_quit_music_button_pressed"]
+[connection signal="timeout" from="load settings/load timer" to="." method="_on_load_timer_timeout"]
+[connection signal="timeout" from="load settings/fail load timer" to="." method="_on_fail_load_timer_timeout"]
