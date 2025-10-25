@@ -43,5 +43,6 @@ func _on_area_2d_mouse_shape_exited(shape_idx: int) -> void:
 	pet_text.text = "hover your cursor over "+str(Globals.pet_name)+" to pet them!"
 	
 func _on_scene_switch_timer_timeout() -> void:
+	Input.set_custom_mouse_cursor(null)
 	Globals.level += 0.5
 	get_tree().change_scene_to_file("res://main_homscreen/main_homescreen.tscn")

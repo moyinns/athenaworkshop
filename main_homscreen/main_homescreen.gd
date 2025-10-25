@@ -4,6 +4,8 @@ extends Node2D
 @onready var hunger_bar = $"hunger bar"
 @onready var thirst_bar = $"thirst bar"
 @onready var level_label = $"level label"
+@onready var save_status = $"save settings/save status"
+@onready var save_timer = $"save settings/save timer"
 
 
 func _ready() -> void:
@@ -12,6 +14,8 @@ func _ready() -> void:
 	thirst_bar.text = "thirst: " + str(Globals.thirst) + "%"
 	$cat.standing()
 	level_label.text = "level: "+str(Globals.level)
+	$"save settings".visible = false
+	$"overwrite options".visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -45,5 +49,30 @@ func save ():
 	file.store_var(Globals.thirst)
 	file.store_var(Globals.level)
 	file.store_var(Globals.pet_name)
+
+func _on_save_pressed() -> void:
+	if FileAccess.file_exists(Globals.save_path):
+		$"save settings".visible = true
+		save_status.text = "this will overwrite the previous save, do you wish to continue?"
+		$"overwrite options".visible = true
+	else:
+		$"save settings".visible = true
+		save()
+		save_timer.start()
+		save_status.text = "save successful!"
+
+func _on_save_timer_timeout() -> void:
+	$"save settings".visible = false
+
+func _on_continue_pressed() -> void:
+	$"overwrite options".visible = false
+	$"save settings".visible = true
+	save()
+	save_timer.start()
+	save_status.text = "save successful!"
 	
-	
+func _on_go_back_pressed() -> void:
+	$"overwrite options".visible = false
+	$"save settings".visible = true
+	save_timer.start()
+	save_status.text = "game not saved"

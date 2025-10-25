@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dnhnxybfs4ig"]
+[gd_scene load_steps=37 format=3 uid="uid://dnhnxybfs4ig"]
 
 [ext_resource type="Texture2D" uid="uid://hs7rgglkj3n3" path="res://main_homscreen/main homescreen pink border.PNG" id="1_4ll6p"]
 [ext_resource type="Script" uid="uid://m446urejm3mv" path="res://main_homscreen/main_homescreen.gd" id="1_5bwec"]
@@ -333,6 +333,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dc713"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.87058824, 0.60784316, 0.69411767, 1)
+
 [node name="main_homescreen" type="Node2D"]
 script = ExtResource("1_5bwec")
 
@@ -461,9 +469,73 @@ text = "
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="save settings" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 435.0
+offset_right = 68.0
+offset_bottom = 475.0
+
+[node name="save status" type="Label" parent="save settings"]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 337.0
+offset_right = 703.0
+offset_bottom = 448.0
+theme_override_colors/font_color = Color(0.87058824, 0.60784316, 0.69411767, 1)
+theme_override_fonts/font = ExtResource("3_5ppu8")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="save timer" type="Timer" parent="save settings"]
+wait_time = 3.0
+
+[node name="overwrite options" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 435.0
+offset_right = 68.0
+offset_bottom = 475.0
+
+[node name="go back" type="Button" parent="overwrite options"]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 458.0
+offset_right = 645.0
+offset_bottom = 514.0
+tooltip_text = "this will overwite your previous save."
+theme_override_colors/font_color = Color(0.87058824, 0.60784316, 0.69411767, 1)
+theme_override_fonts/font = ExtResource("3_5ppu8")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_dc713")
+text = "go back
+"
+autowrap_mode = 3
+
+[node name="continue" type="Button" parent="overwrite options"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 456.0
+offset_right = 452.0
+offset_bottom = 512.0
+tooltip_text = "this will overwite your previous save."
+theme_override_colors/font_color = Color(0.87058824, 0.60784316, 0.69411767, 1)
+theme_override_fonts/font = ExtResource("3_5ppu8")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_dc713")
+text = "continue"
+autowrap_mode = 3
+
 [connection signal="pressed" from="give food" to="." method="_on_give_food_pressed"]
 [connection signal="pressed" from="give water" to="." method="_on_give_water_pressed"]
 [connection signal="pressed" from="pet" to="." method="_on_pet_pressed"]
+[connection signal="pressed" from="save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
 [connection signal="timeout" from="hunger_timer" to="." method="_on_hunger_timer_timeout"]
 [connection signal="timeout" from="thirst_timer" to="." method="_on_thirst_timer_timeout"]
+[connection signal="timeout" from="save settings/save timer" to="." method="_on_save_timer_timeout"]
+[connection signal="pressed" from="overwrite options/go back" to="." method="_on_go_back_pressed"]
+[connection signal="pressed" from="overwrite options/continue" to="." method="_on_continue_pressed"]
