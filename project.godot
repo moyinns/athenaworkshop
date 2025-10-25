@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="adopt me"
+config/name="adopt-me"
 run/main_scene="uid://bedf10efwliqi"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
