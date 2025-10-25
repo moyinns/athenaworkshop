@@ -1,2 +1,4 @@
-# athenaworkshop
-a game where you take care of a cat!
+# athenaworkshop - adopt me!
+
+a game where you adopt and take care of a cat!
+
