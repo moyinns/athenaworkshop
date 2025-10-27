@@ -7,7 +7,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mlqw3"]
 
 [node name="opening_screen" type="Node2D"]
-position = Vector2(5, 7)
 script = ExtResource("1_fmed4")
 
 [node name="TextureRect" type="TextureRect" parent="."]

@@ -44,22 +44,49 @@ func _on_pet_pressed() -> void:
 	get_tree().change_scene_to_file("res://water + food + pet screen/pet_scene.tscn")
 
 func save ():
-	var file = FileAccess.open(Globals.save_path, FileAccess.WRITE)
-	file.store_var(Globals.hunger)
-	file.store_var(Globals.thirst)
-	file.store_var(Globals.level)
-	file.store_var(Globals.pet_name)
+	if OS.has_feature("web"):
+		pass
+	else:
+		Globals.save_path = "user://variable.save"
+		var file = FileAccess.open(Globals.save_path, FileAccess.WRITE)
+		file.store_var(Globals.hunger)
+		file.store_var(Globals.thirst)
+		file.store_var(Globals.level)
+		file.store_var(Globals.pet_name)
 
 func _on_save_pressed() -> void:
-	if FileAccess.file_exists(Globals.save_path):
+	var save_exists = false
+	if OS.has_feature("web"):
+		$"save settings".visible = true
+		save_status.text = "save function isnt avaiable on web."
+	else:
+		# Check for save in file system
+		Globals.save_path = "user://variable.save"
+		if FileAccess.file_exists(Globals.save_path):
+			save_exists = true
+	if save_exists:
+		# Show overwrite warning if a save exists
 		$"save settings".visible = true
 		save_status.text = "this will overwrite the previous save, do you wish to continue?"
 		$"overwrite options".visible = true
 	else:
+		# Save immediately if no save exists
 		$"save settings".visible = true
 		save()
 		save_timer.start()
 		save_status.text = "save successful!"
+	
+	
+	
+	#if FileAccess.file_exists(Globals.save_path):
+		#$"save settings".visible = true
+		#save_status.text = "this will overwrite the previous save, do you wish to continue?"
+		#$"overwrite options".visible = true
+	#else:
+		#$"save settings".visible = true
+		#save()
+		#save_timer.start()
+		#save_status.text = "save successful!"
 
 func _on_save_timer_timeout() -> void:
 	$"save settings".visible = false

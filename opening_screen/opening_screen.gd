@@ -1,6 +1,5 @@
 extends Node2D
 
-
 @onready var load_status = $"load settings/load status"
 @onready var load_timer = $"load settings/load timer"
 @onready var fail_load_timer = $"load settings/fail load timer"
@@ -18,26 +17,44 @@ func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://naming_screen/naming_scene.tscn")
 
 func _on_load_pressed() -> void:
-	load_data()
-	$"load settings".visible = true
-	if load_data() == true:
-		load_status.text = "load successful!"
-		load_timer.start()
+	if OS.has_feature("web"):
+		load_status.text = "load function isnt available on web :("
 	else:
-		load_status.text = "no load found"
-		fail_load_timer.start()
+		load_data()
+		$"load settings".visible = true
+		if load_data() == true:
+			load_status.text = "load successful!"
+			load_timer.start()
+		else:
+			load_status.text = "no load found"
+			fail_load_timer.start()
 
 
 func load_data():
-	if FileAccess.file_exists(Globals.save_path):
-		var file = FileAccess.open(Globals.save_path, FileAccess.READ)
-		Globals.hunger = file.get_var()
-		Globals.thirst = file.get_var()
-		Globals.level = file.get_var()
-		Globals.pet_name = file.get_var()
-		return true
+	if OS.has_feature("web"):
+		pass
 	else:
-		return false
+		# For desktop, use the file system
+		Globals.save_path = "user://variable.save"
+		if FileAccess.file_exists(Globals.save_path):
+			var file = FileAccess.open(Globals.save_path, FileAccess.READ)
+			Globals.hunger = file.get_var()
+			Globals.thirst = file.get_var()
+			Globals.level = file.get_var()
+			Globals.pet_name = file.get_var()
+			return true
+		else:
+			return false
+	
+	#if FileAccess.file_exists(Globals.save_path):
+		#var file = FileAccess.open(Globals.save_path, FileAccess.READ)
+		#Globals.hunger = file.get_var()
+		#Globals.thirst = file.get_var()
+		#Globals.level = file.get_var()
+		#Globals.pet_name = file.get_var()
+		#return true
+	#else:
+		#return false
 		
 func _on_load_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://main_homscreen/main_homescreen.tscn")	
