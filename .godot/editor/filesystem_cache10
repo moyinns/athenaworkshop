@@ -1,0 +1,66 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1761572080
+cropped 8min chill music.ogg::AudioStreamOggVorbis::6025243393130616191::1761571384::1761571385::1::::<><><>0<>0<>5f8e1d94005a857598ef5538ac46551c<>res://.godot/imported/cropped 8min chill music.ogg-ab0f4928a75abef3ae3e1523e1e670f3.oggvorbisstr::
+export_presets.cfg::TextFile::-1::1761572080::0::1::::<><><>0<>0<><>::
+globals.gd::GDScript::3004948196357253499::1761468592::0::1::::<>Node<><>0<>0<><>::
+icon.svg::CompressedTexture2D::3135137061379982879::1761052233::1761572066::1::::<><><>0<>0<>a92412b265accfc2574df6ecda639381<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+music.gd::GDScript::3953655347027704273::1761327433::0::1::::<>Node2D<><>0<>0<><>::
+music.tscn::PackedScene::3835762413334210475::1761571547::0::1::::<><><>0<>0<><>::uid://bwlgejtr225ov::::res://music.gd<>uid://cr3w44ocss7h8::::res://cropped 8min chill music.ogg
+README.md::TextFile::-1::1761422158::0::1::::<><><>0<>0<><>::
+::res://addons/::1761445522
+name your pet screen white border.PNG::CompressedTexture2D::6214401069635955324::1761306872::1761445522::1::::<><><>0<>0<>c2384caff4758d0f1ff15c988db248c0<>res://.godot/imported/name your pet screen white border.PNG-7acc9022ec33be7f2d0d0cecd244ee14.ctex::
+name your pet screen whte border.PNG::CompressedTexture2D::4735062083587044362::1761306970::1761445522::1::::<><><>0<>0<>49b6c098c5be73997ce70c358a420c30<>res://.godot/imported/name your pet screen whte border.PNG-94d47c927101bb8eb1b6fff4f7871727.ctex::
+paw cursor.png::CompressedTexture2D::3186783891475377662::1761354609::1761445522::1::::<><><>0<>0<>20d4775106176a2ba46b8f1bdc958b80<>res://.godot/imported/paw cursor.png-f06e0f46b74c1f4723b6dc03561e29b4.ctex::
+::res://addons/godot_super-wakatime/::1761305021
+api_key_prompt.tscn::PackedScene::3919262858641749045::1761304975::0::1::::<><><>0<>0<><>::
+counter.tscn::PackedScene::6849360014225833986::1761304975::0::1::::<><><>0<>0<><>::
+decompressor.gd::GDScript::513498479588648040::1761304975::0::1::::<>RefCounted<><>0<>0<><>::
+godot_super-wakatime.gd::GDScript::6277149880384411866::1761304975::0::1::::<>EditorPlugin<><>0<>1<><>::
+plugin.cfg::TextFile::-1::1761304975::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1761304975::0::1::::<><><>0<>0<><>::
+utils.gd::GDScript::5251015809120159908::1761304975::0::1::::<>RefCounted<><>0<>0<><>::
+::res://export 3/::1761572100
+index.apple-touch-icon.png::CompressedTexture2D::453864986028104337::1761572079::1761573806::1::::<><><>0<>0<>730dbf9b5019f643a2660bd10e3dab53<>res://.godot/imported/index.apple-touch-icon.png-288751e976a50538cef4cb27a2318067.ctex::
+index.icon.png::CompressedTexture2D::6595053072271308121::1761572079::1761573805::1::::<><><>0<>0<>46b7553463f135c6c396f1eeb29f2478<>res://.godot/imported/index.icon.png-6970cadd989a3745643878d34589269a.ctex::
+index.png::CompressedTexture2D::7111054218094714668::1761572079::1761573806::1::::<><><>0<>0<>b42510411d2a9441f4a470a762647cbb<>res://.godot/imported/index.png-73be940d1da88614fb6c5dede903e204.ctex::
+::res://kindergarten_4 FONT/::1761445522
+kindergarten.ttf::FontFile::2816293950775820988::1761306143::1761445521::1::::<><><>0<>0<>f701c5c5fa85f1873814f770e1c17e52<>res://.godot/imported/kindergarten.ttf-f7fc14f5f57c8525cec93de439a88d08.fontdata::
+main homescreen - buttons pink border.PNG::CompressedTexture2D::2557482478791478921::1761310731::1761445522::1::::<><><>0<>0<>aea93786b19e04c1ca8b60950e2725fa<>res://.godot/imported/main homescreen - buttons pink border.PNG-efd87dfda5dd42da180521d974e61190.ctex::
+::res://main_homscreen/::1761571549
+death scene pink border.PNG::CompressedTexture2D::7886315302922824395::1761320804::1761445522::1::::<><><>0<>0<>3bcd34e790882db7c88d4914a1adcdd2<>res://.godot/imported/death scene pink border.PNG-011840e76f7115aaaaa2b85e6d921220.ctex::
+death_scene.gd::GDScript::8939241038488376379::1761342353::0::1::::<>Node2D<><>0<>0<><>::
+death_scene.tscn::PackedScene::1771210917278917053::1761415675::0::1::::<><><>0<>0<><>::uid://d0mh81533mcat::::res://main_homscreen/death_scene.gd<>uid://dkmgpwyveuuhn::::res://main_homscreen/death scene pink border.PNG<>uid://bgeh7kdamamam::::res://kindergarten_4 FONT/kindergarten.ttf<>uid://00uhsu14vduv::::res://main_homscreen/death_timer.gd<>uid://du3fo7iyggmpr::::res://PACK/cat 3 (64х64).png<>uid://dlxldcxiq0gst::::res://naming_screen/cat.gd
+death_timer.gd::GDScript::1807558352752262785::1761322022::0::1::::<>Timer<><>0<>0<><>::
+main homescreen - buttons pink border.PNG::CompressedTexture2D::2765909740201114006::1761310741::1761445522::1::::<><><>0<>0<>1789ef298da465c010912cce8b925166<>res://.godot/imported/main homescreen - buttons pink border.PNG-769e718efac1572739e7fb8825532a67.ctex::
+main homescreen pink border.PNG::CompressedTexture2D::530454332226679694::1761310734::1761445522::1::::<><><>0<>0<>77c0d043f2f5b8d4b0dc793cc6fe6612<>res://.godot/imported/main homescreen pink border.PNG-7e33a3214b3250fa116b80015f27dbf4.ctex::
+main_homescreen.gd::GDScript::903950307848352461::1761571549::0::1::::<>Node2D<><>0<>0<><>::
+main_homescreen.tscn::PackedScene::237852921152220810::1761415675::0::1::::<><><>0<>0<><>::uid://hs7rgglkj3n3::::res://main_homscreen/main homescreen pink border.PNG<>uid://m446urejm3mv::::res://main_homscreen/main_homescreen.gd<>uid://bgeh7kdamamam::::res://kindergarten_4 FONT/kindergarten.ttf<>uid://dygpi2dnu8pin::::res://main_homscreen/timer.gd<>uid://du3fo7iyggmpr::::res://PACK/cat 3 (64х64).png<>uid://dlxldcxiq0gst::::res://naming_screen/cat.gd
+timer.gd::GDScript::8857107029542744193::1761313301::0::1::::<>Timer<><>0<>0<><>::
+::res://naming_screen/::1761445522
+cat.gd::GDScript::7979493404706236823::1761355504::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+name your pet screen pink border.PNG::CompressedTexture2D::8500569013335433724::1761307105::1761445522::1::::<><><>0<>0<>5eee403f0a6b897f3fafa8947663f4e2<>res://.godot/imported/name your pet screen pink border.PNG-a6d3b983e9b593547217d569a4877f42.ctex::
+name your pet screen.PNG::CompressedTexture2D::984294920281977921::1761306130::1761445522::1::::<><><>0<>0<>3c02414d2f007da065724bc184486bc2<>res://.godot/imported/name your pet screen.PNG-e9e585a13fcacfbd9b2b1319f1b4543b.ctex::
+naming_scene.gd::GDScript::9083910167835018855::1761325911::0::1::::<>Node2D<><>0<>0<><>::
+naming_scene.tscn::PackedScene::3018933155292501505::1761415675::0::1::::<><><>0<>0<><>::uid://d2okw5k6qadsx::::res://naming_screen/naming_scene.gd<>uid://dtd0en61cb3sa::::res://naming_screen/name your pet screen pink border.PNG<>uid://dlxldcxiq0gst::::res://naming_screen/cat.gd<>uid://bgeh7kdamamam::::res://kindergarten_4 FONT/kindergarten.ttf<>uid://du3fo7iyggmpr::::res://PACK/cat 3 (64х64).png
+::res://opening_screen/::1761571550
+larger opening screen.PNG::CompressedTexture2D::144714742430861775::1761306476::1761445522::1::::<><><>0<>0<>d22b679252e2a0870850b8125daae473<>res://.godot/imported/larger opening screen.PNG-2458908eb22084017b702eef143dfd0d.ctex::
+opening screen.PNG::CompressedTexture2D::7673876212423767186::1761305793::1761445522::1::::<><><>0<>0<>f076f2c640e6dabb03cbdb993dd36241<>res://.godot/imported/opening screen.PNG-a20dffbeda038a8992cd9e5fb1dfef28.ctex::
+opening_screen.gd::GDScript::8077455897527387449::1761571550::0::1::::<>Node2D<><>0<>0<><>::
+opening_screen.tscn::PackedScene::2673720526632759456::1761571550::0::1::::<><><>0<>0<><>::uid://dnc1rvnf24u06::::res://opening_screen/opening_screen.gd<>uid://ccdov332oil0::::res://opening_screen/larger opening screen.PNG<>uid://bgeh7kdamamam::::res://kindergarten_4 FONT/kindergarten.ttf
+::res://PACK/::1761445522
+black cat with text.png::CompressedTexture2D::5744186721812941373::1761307339::1761445522::1::::<><><>0<>0<>f9314fea13b96e0d478ff914fe723051<>res://.godot/imported/black cat with text.png-afd7a44814bf2199a649c11e4c183788.ctex::
+cat 1 (64х64).png::CompressedTexture2D::1177736481986568809::1761307339::1761445522::1::::<><><>0<>0<>ee0e8c599dfcb3f5c02b39b066cbdd64<>res://.godot/imported/cat 1 (64х64).png-140a260dc9220a3e6a811fd38373e7ea.ctex::
+cat 2 (64х64).png::CompressedTexture2D::3862974200623304118::1761307339::1761445522::1::::<><><>0<>0<>2f910950fbb403b0dfef60aab5feaba5<>res://.godot/imported/cat 2 (64х64).png-1ec403158a0fdf541013f4a32d4d6f1c.ctex::
+cat 3 (64х64).png::CompressedTexture2D::8621171781236483791::1761307339::1761445522::1::::<><><>0<>0<>93ee6a7c7bfd52b5b33c20d57f76fe7e<>res://.godot/imported/cat 3 (64х64).png-570b9703238ff48eb6b0bcc9556a58c6.ctex::
+ginger cat with text.png::CompressedTexture2D::3349290973439214680::1761307339::1761445522::1::::<><><>0<>0<>350514ae6885d563fa7e11ae3f3a4db9<>res://.godot/imported/ginger cat with text.png-98a0dfd6f0b76f985dae3f88606219a2.ctex::
+white cat with text.png::CompressedTexture2D::6959127513179974676::1761307339::1761445522::1::::<><><>0<>0<>b755b0a075de96fba8aaafad0e35923d<>res://.godot/imported/white cat with text.png-54b4adb5cd4d43ec0baddf38fdedba2c.ctex::
+::res://water + food + pet screen/::1761445521
+food bowl.PNG::CompressedTexture2D::7249663710913436610::1761332176::1761445521::1::::<><><>0<>0<>6bd558a343a740a78cc8c9fa2ed4f1fd<>res://.godot/imported/food bowl.PNG-3486dcee2cb33d94c5d044cdc2961532.ctex::
+food_scene.gd::GDScript::7302242835628997427::1761394754::0::1::::<>Node2D<><>0<>0<><>::
+food_scene.tscn::PackedScene::4155803636480868819::1761415675::0::1::::<><><>0<>0<><>::uid://dcbi4w06i5msp::::res://water + food + pet screen/food_scene.gd<>uid://bfn3enqwqpr2e::::res://main_homscreen/main homescreen - buttons pink border.PNG<>uid://du3fo7iyggmpr::::res://PACK/cat 3 (64х64).png<>uid://dlxldcxiq0gst::::res://naming_screen/cat.gd<>uid://dbj15w4kj2mqk::::res://water + food + pet screen/food bowl.PNG<>uid://bgeh7kdamamam::::res://kindergarten_4 FONT/kindergarten.ttf<>uid://dygpi2dnu8pin::::res://main_homscreen/timer.gd
+paw cursor.png::CompressedTexture2D::2658299085923020966::1761354624::1761445521::1::::<><><>0<>0<>b2411a14c1a90d58bfebfd1974c78e33<>res://.godot/imported/paw cursor.png-2239aa04c0873c444ecf383afa721898.ctex::
+pet_scene.gd::GDScript::1251155245922092370::1761415634::0::1::::<>Node2D<><>0<>0<><>::
+pet_scene.tscn::PackedScene::8295541500974576302::1761415675::0::1::::<><><>0<>0<><>::uid://r3clx1w6kmqc::::res://water + food + pet screen/pet_scene.gd<>uid://bfn3enqwqpr2e::::res://main_homscreen/main homescreen - buttons pink border.PNG<>uid://du3fo7iyggmpr::::res://PACK/cat 3 (64х64).png<>uid://dlxldcxiq0gst::::res://naming_screen/cat.gd<>uid://bgeh7kdamamam::::res://kindergarten_4 FONT/kindergarten.ttf<>uid://dygpi2dnu8pin::::res://main_homscreen/timer.gd
+water bowl.PNG::CompressedTexture2D::1303822098832007396::1761332178::1761445521::1::::<><><>0<>0<>50112c7720982b2b9f256cd643be41d3<>res://.godot/imported/water bowl.PNG-c260d28b7145544fd030223c635e70e8.ctex::
+water_scene.gd::GDScript::7405897580126061973::1761394755::0::1::::<>Node2D<><>0<>0<><>::
+water_scene.tscn::PackedScene::4087321343239885861::1761415675::0::1::::<><><>0<>0<><>::uid://ddrqb0dugo4ar::::res://water + food + pet screen/water_scene.gd<>uid://bfn3enqwqpr2e::::res://main_homscreen/main homescreen - buttons pink border.PNG<>uid://du3fo7iyggmpr::::res://PACK/cat 3 (64х64).png<>uid://dlxldcxiq0gst::::res://naming_screen/cat.gd<>uid://stt027qof6oe::::res://water + food + pet screen/water bowl.PNG<>uid://bgeh7kdamamam::::res://kindergarten_4 FONT/kindergarten.ttf<>uid://dygpi2dnu8pin::::res://main_homscreen/timer.gd
